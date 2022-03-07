@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/templates/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 import { FooterComponent } from './views/templates/footer/footer.component';
+import { ProjectsComponent } from './views/projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
