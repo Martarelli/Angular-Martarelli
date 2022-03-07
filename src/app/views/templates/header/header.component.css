@@ -15,9 +15,13 @@
   padding: 15px;
 }
 
-.links > a {
+a {
   padding: 0px 15px;
   text-decoration: none;
   color: whitesmoke;
+}
 
+a:hover {
+  color: black;
+  transition: ease-in-out 1.2s  ;
 }
