@@ -1,0 +1,23 @@
+.header {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 15px;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.links > a {
+  padding: 0px 15px;
+  text-decoration: none;
+  color: whitesmoke;
+
+}
