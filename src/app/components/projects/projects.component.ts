@@ -1,3 +1,4 @@
+import { ApiGithubService } from './../../shared/services/api-github.service';
 import { Component, OnInit } from '@angular/core';
 import { GridInterface } from '../models/grid-model';
 
@@ -15,10 +16,19 @@ export class ProjectsComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
+  data:Object = {};
 
-  constructor() { }
+  constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
+    this.getApi();
+    console.log(this.data)
   }
 
+  getApi(){
+    this.apiGithub.getApi().subscribe(data => {
+      this.data = data
+    });
+
+  }
 }
