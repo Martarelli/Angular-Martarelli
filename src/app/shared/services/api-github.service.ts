@@ -8,12 +8,12 @@ import { Observable } from 'rxjs';
 export class ApiGithubService {
 
  apiURL:string = 'https://api.github.com/repos/Martarelli'
+ projectOne:string = 'Calculadora-EstacaJS'
 
  constructor(private httpClient: HttpClient) { }
 
- getApi():Observable<Object> {
-
-   return this.httpClient.get<Object>(this.apiURL);
+ getProjectOne():Observable<Object> {
+   return this.httpClient.get<Object>(`${this.apiURL}/${this.projectOne}`);
  }
 
 }

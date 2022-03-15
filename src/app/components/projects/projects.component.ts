@@ -16,18 +16,23 @@ export class ProjectsComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
-  data:Object = {};
+  dataOne:Object = {};
+  dataTwo:Object = {};
+  dataThree:Object = {};
+  dataFour:Object = {};
+
+
 
   constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
-    this.getApi();
-    console.log(this.data)
+    this.getProjectOne();
   }
 
-  getApi(){
-    this.apiGithub.getApi().subscribe(data => {
-      this.data = data
+  getProjectOne(){
+    this.apiGithub.getProjectOne().subscribe(data => {
+      this.dataOne = data
+      console.log(this.dataOne)
     });
 
   }
