@@ -16,12 +16,10 @@ export class ProjectsComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
 
-  dataOne:Object = {};
+  dataOne: Array<any> = [];
   dataTwo:Object = {};
   dataThree:Object = {};
   dataFour:Object = {};
-
-
 
   constructor(private apiGithub: ApiGithubService) { }
 
@@ -30,18 +28,22 @@ export class ProjectsComponent implements OnInit {
     this.getProjectTwo();
     this.getProjectThree();
     this.getProjectFour();
+    //
+
   }
 
   getProjectOne(){
     this.apiGithub.getProjectOne().subscribe(data => {
-      this.dataOne = data
-      console.log(this.dataOne)
+      let dataOne = data
+      console.log(dataOne)
+      this.dataOne = Object.values(dataOne)
+      this.tiles[0].text = this.dataOne[3];
     });
   }
 
   getProjectTwo() {
     this.apiGithub.getProjectTwo().subscribe(data => {
-      this.dataTwo = data
+      this.dataTwo = data;
       console.log(this.dataTwo)
     });
   }
