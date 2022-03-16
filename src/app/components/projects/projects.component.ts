@@ -17,9 +17,9 @@ export class ProjectsComponent implements OnInit {
   ];
 
   dataOne: Array<any> = [];
-  dataTwo:Object = {};
-  dataThree:Object = {};
-  dataFour:Object = {};
+  dataTwo: Array<any> = [];
+  dataThree: Array<any> = [];
+  dataFour: Array<any> = [];
 
   constructor(private apiGithub: ApiGithubService) { }
 
@@ -28,37 +28,34 @@ export class ProjectsComponent implements OnInit {
     this.getProjectTwo();
     this.getProjectThree();
     this.getProjectFour();
-    //
 
   }
 
   getProjectOne(){
     this.apiGithub.getProjectOne().subscribe(data => {
-      let dataOne = data
-      console.log(dataOne)
-      this.dataOne = Object.values(dataOne)
+      this.dataOne = Object.values(data)
       this.tiles[0].text = this.dataOne[3];
     });
   }
 
   getProjectTwo() {
     this.apiGithub.getProjectTwo().subscribe(data => {
-      this.dataTwo = data;
-      console.log(this.dataTwo)
+      this.dataTwo = Object.values(data)
+      this.tiles[1].text = this.dataTwo[3];
     });
   }
 
   getProjectThree(){
     this.apiGithub.getProjectThree().subscribe(data => {
-      this.dataThree = data
-      console.log(this.dataThree)
+      this.dataThree = Object.values(data)
+      this.tiles[2].text = this.dataThree[3];
     });
   }
 
   getProjectFour(){
     this.apiGithub.getProjectFour().subscribe(data => {
-      this.dataFour = data
-      console.log(this.dataFour)
+      this.dataFour = Object.values(data)
+      this.tiles[3].text = this.dataFour[3];
     });
   }
 
