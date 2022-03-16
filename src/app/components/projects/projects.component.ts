@@ -27,6 +27,9 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectOne();
+    this.getProjectTwo();
+    this.getProjectThree();
+    this.getProjectFour();
   }
 
   getProjectOne(){
@@ -34,6 +37,29 @@ export class ProjectsComponent implements OnInit {
       this.dataOne = data
       console.log(this.dataOne)
     });
-
   }
+
+  getProjectTwo() {
+    this.apiGithub.getProjectTwo().subscribe(data => {
+      this.dataTwo = data
+      console.log(this.dataTwo)
+    });
+  }
+
+  getProjectThree(){
+    this.apiGithub.getProjectThree().subscribe(data => {
+      this.dataThree = data
+      console.log(this.dataThree)
+    });
+  }
+
+  getProjectFour(){
+    this.apiGithub.getProjectFour().subscribe(data => {
+      this.dataFour = data
+      console.log(this.dataFour)
+    });
+  }
+
+
+
 }

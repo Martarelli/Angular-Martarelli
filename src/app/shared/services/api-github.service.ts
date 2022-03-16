@@ -11,7 +11,7 @@ export class ApiGithubService {
  projectOne:string = 'Calculadora-EstacaJS'
  projectTwo:string = 'diretivasAngular-DIO'
  projectThree:string = 'CRUD-Cod3r'
- projectFour:string = ' Netflix'
+ projectFour:string = 'Netflix'
 
  constructor(private httpClient: HttpClient) { }
 
