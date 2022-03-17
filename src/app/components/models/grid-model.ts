@@ -6,5 +6,6 @@ export interface GridInterface {
   color: string,
   url: string,
   imgurl: string,
+  description: string,
 
 }
