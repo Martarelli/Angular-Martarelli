@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: 'One', cols: 4, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
-    {title: 'Two', cols: 2, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
-    {title: 'Three', cols: 2, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
-    {title: 'Four', cols: 2, rows: 1, color: '#DDBDF1', url:' ', imgurl: ' ', description: ' '},
+    {title: ' ', cols: 4, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
+    {title: ' ', cols: 2, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
+    {title: ' ', cols: 2, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
+    {title: ' ', cols: 2, rows: 1, color: '#DDBDF1', url:' ', imgurl: ' ', description: ' '},
   ];
 
   dataOne: Array<any> = [];
