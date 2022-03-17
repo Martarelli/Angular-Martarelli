@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    {text: 'One', cols: 3, rows: 1, color: 'lightblue', url:'', imgurl: ''},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen', url:'', imgurl: ''},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink', url:'', imgurl: ''},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1', url:'', imgurl: ''},
   ];
 
   dataOne: Array<any> = [];
@@ -35,7 +35,6 @@ export class ProjectsComponent implements OnInit {
       this.dataOne = Object.values(data)
       this.tiles[0].text = this.dataOne[2];
       console.log(this.dataOne)
-
     });
   }
 
