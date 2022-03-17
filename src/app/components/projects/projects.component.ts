@@ -36,7 +36,6 @@ export class ProjectsComponent implements OnInit {
       this.tiles[0].title = this.dataOne[2];
       this.tiles[0].url = this.dataOne[6];
       this.tiles[0].description = this.dataOne[7];
-      console.log(this.dataOne)
     });
   }
 
@@ -44,6 +43,8 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectTwo().subscribe(data => {
       this.dataTwo = Object.values(data)
       this.tiles[1].title = this.dataTwo[2];
+      this.tiles[1].url = this.dataTwo[6];
+      this.tiles[1].description = this.dataTwo[7];
     });
   }
 
@@ -51,6 +52,8 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectThree().subscribe(data => {
       this.dataThree = Object.values(data)
       this.tiles[2].title = this.dataThree[2];
+      this.tiles[2].url = this.dataThree[6];
+      this.tiles[2].description = this.dataThree[7];
     });
   }
 
@@ -58,6 +61,8 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectFour().subscribe(data => {
       this.dataFour = Object.values(data)
       this.tiles[3].title = this.dataFour[2];
+      this.tiles[3].url = this.dataFour[6];
+      this.tiles[3].description = this.dataFour[7];
     });
   }
 
