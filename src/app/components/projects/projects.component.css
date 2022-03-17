@@ -1,1 +1,20 @@
+.container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 0px;
 
+
+}
+
+.container > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.mat-grid-tile-content {
+  align-items: flex-end !important;
+}

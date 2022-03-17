@@ -3,8 +3,11 @@
       *ngFor="let tile of tiles"
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
-      [style.background]="tile.color">
-      <a [routerLink]="tile.url">{{tile.title}}</a>
-      <p>{{tile.description}}</p>
+      [style.background]="tile.color"
+      >
+      <div class="container">
+        <a [routerLink]="tile.url">{{tile.title}}</a>
+        <p>{{tile.description}}</p>
+      </div>
   </mat-grid-tile>
 </mat-grid-list>
