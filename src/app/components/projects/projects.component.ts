@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: 'One', cols: 3, rows: 1, color: 'lightblue', url:'', imgurl: '', description: ''},
-    {title: 'Two', cols: 1, rows: 2, color: 'lightgreen', url:'', imgurl: '', description: ''},
-    {title: 'Three', cols: 1, rows: 1, color: 'lightpink', url:'', imgurl: '', description: ''},
-    {title: 'Four', cols: 2, rows: 1, color: '#DDBDF1', url:'', imgurl: '', description: ''},
+    {title: 'One', cols: 3, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
+    {title: 'Two', cols: 1, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
+    {title: 'Three', cols: 1, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
+    {title: 'Four', cols: 2, rows: 1, color: '#DDBDF1', url:' ', imgurl: ' ', description: ' '},
   ];
 
   dataOne: Array<any> = [];
@@ -34,8 +34,8 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectOne().subscribe(data => {
       this.dataOne = Object.values(data)
       this.tiles[0].title = this.dataOne[2];
-      this.tiles[4].title = this.dataOne[6];
-      this.tiles[5].title = this.dataOne[7];
+      this.tiles[0].url = this.dataOne[6];
+      this.tiles[0].description = this.dataOne[7];
       console.log(this.dataOne)
     });
   }
