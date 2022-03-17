@@ -28,34 +28,35 @@ export class ProjectsComponent implements OnInit {
     this.getProjectTwo();
     this.getProjectThree();
     this.getProjectFour();
-
   }
 
   getProjectOne(){
     this.apiGithub.getProjectOne().subscribe(data => {
       this.dataOne = Object.values(data)
-      this.tiles[0].text = this.dataOne[3];
+      this.tiles[0].text = this.dataOne[2];
+      console.log(this.dataOne)
+
     });
   }
 
   getProjectTwo() {
     this.apiGithub.getProjectTwo().subscribe(data => {
       this.dataTwo = Object.values(data)
-      this.tiles[1].text = this.dataTwo[3];
+      this.tiles[1].text = this.dataTwo[2];
     });
   }
 
   getProjectThree(){
     this.apiGithub.getProjectThree().subscribe(data => {
       this.dataThree = Object.values(data)
-      this.tiles[2].text = this.dataThree[3];
+      this.tiles[2].text = this.dataThree[2];
     });
   }
 
   getProjectFour(){
     this.apiGithub.getProjectFour().subscribe(data => {
       this.dataFour = Object.values(data)
-      this.tiles[3].text = this.dataFour[3];
+      this.tiles[3].text = this.dataFour[2];
     });
   }
 
