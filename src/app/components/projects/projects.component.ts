@@ -10,9 +10,9 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: 'One', cols: 3, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
-    {title: 'Two', cols: 1, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
-    {title: 'Three', cols: 1, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
+    {title: 'One', cols: 4, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
+    {title: 'Two', cols: 2, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
+    {title: 'Three', cols: 2, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
     {title: 'Four', cols: 2, rows: 1, color: '#DDBDF1', url:' ', imgurl: ' ', description: ' '},
   ];
 
