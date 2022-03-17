@@ -4,6 +4,7 @@
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
       [style.background]="tile.color">
-    {{tile.title}}
+      <a [routerLink]="tile.url">{{tile.title}}</a>
+      <p>{{tile.description}}</p>
   </mat-grid-tile>
 </mat-grid-list>
