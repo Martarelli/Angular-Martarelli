@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: ' ', cols: 4, rows: 1, color: 'lightblue', url:' ', imgurl: ' ', description: ' '},
-    {title: ' ', cols: 2, rows: 2, color: 'lightgreen', url:' ', imgurl: ' ', description: ' '},
-    {title: ' ', cols: 2, rows: 1, color: 'lightpink', url:' ', imgurl: ' ', description: ' '},
-    {title: ' ', cols: 2, rows: 1, color: '#DDBDF1', url:' ', imgurl: ' ', description: ' '},
+    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
+    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
   ];
 
   dataOne: Array<any> = [];

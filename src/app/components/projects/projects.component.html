@@ -3,7 +3,7 @@
       *ngFor="let tile of tiles"
       [colspan]="tile.cols"
       [rowspan]="tile.rows"
-      [style.background]="tile.color"
+      [style.background]="tile.imgurl"
       >
       <div class="container">
         <a [href]="tile.url" target="_blank">{{tile.title}}</a>
