@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
-    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
-    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
-    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://upload.wikimedia.org/wikipedia/commons/b/b6/Image_created_with_a_mobile_phone.png)', description: ' '},
+    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1DrMSGoFGZh7q_SWnM4yfGUp93Xwdp9CM&export=download)', description: ' '},
+    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1YoaERu9rZjGncEjwnsLlqwow6xXl_AGZ&export=download)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=11TcjEFowqvEXVHDoqb-LoBZ5jHhfAxHg&export=download)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1HyoyCaC8kWbVQ5PhlhnNAnWa-n9WSl04&export=download)', description: ' '},
   ];
 
   dataOne: Array<any> = [];
@@ -36,6 +36,7 @@ export class ProjectsComponent implements OnInit {
       this.tiles[0].title = this.dataOne[2];
       this.tiles[0].url = this.dataOne[6];
       this.tiles[0].description = this.dataOne[7];
+      console.log(data)
     });
   }
 
