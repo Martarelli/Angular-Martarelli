@@ -3,18 +3,22 @@
   justify-content: center;
   text-align: center;
   margin-top: 320px;
+  padding-top: 20px;
+  background: rgba(55,55,55,0.8);
+  color: whitesmoke;
 }
 
 .container > a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
   font-weight: 800;
   font-size: 2rem;
-  text-shadow: 15px 10px 6px rgba(50,50,50,0.6) ;
+  text-shadow: 15px 10px 6px rgba(0,0,0,0.6) ;
 }
 
 .container > p {
   margin-top: 20px;
+  font-weight: 600;
 }
 
 .container > a:hover {
