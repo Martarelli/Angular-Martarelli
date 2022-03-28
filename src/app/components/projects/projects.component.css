@@ -1,6 +1,4 @@
 .container {
-  align-items: center;
-  justify-content: center;
   text-align: center;
   margin-top: 320px;
   padding-top: 20px;
@@ -23,7 +21,7 @@
 
 .container > a:hover {
   font-size: 2.2rem;
-  color: red;
+  color: grey;
   transition: ease-in-out 1s ;
 }
 .container > a:active {

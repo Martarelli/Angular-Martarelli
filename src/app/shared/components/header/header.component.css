@@ -16,9 +16,11 @@
 }
 
 a {
+  font-size: 2rem;
   padding: 0px 15px;
   text-decoration: none;
-  color: whitesmoke;
+  color: white;
+  text-shadow: 7px 5px 6px rgba(0,0,0,0.6) ;
 }
 
 a:hover {
