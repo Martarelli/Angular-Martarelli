@@ -5,6 +5,8 @@
   left: 0;
   margin: auto;
   padding-top: 20px;
+  height: 120px;
+
   background: rgba(55,55,55,0.8);
   color: whitesmoke;
 }
@@ -18,18 +20,18 @@
 }
 
 .container > p {
-  margin-top: 20px;
+  padding-top: 20px;
   font-weight: 600;
 }
 
 .container > a:hover {
-  font-size: 2.2rem;
+  font-size: 2.05rem;
   color: grey;
-  transition: ease-in-out 1s ;
+  transition: all 1s ;
 }
 .container > a:active {
-  font-size: 2.1rem;
+  font-size: 2.05rem;
   color: whitesmoke;
-  transition: ease-in-out 1s ;
+  transition: all 1s ;
 }
 
