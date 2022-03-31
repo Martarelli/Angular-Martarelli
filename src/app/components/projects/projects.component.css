@@ -1,6 +1,9 @@
 .container {
   text-align: center;
-  margin-top: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   padding-top: 20px;
   background: rgba(55,55,55,0.8);
   color: whitesmoke;

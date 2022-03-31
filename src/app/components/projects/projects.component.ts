@@ -36,7 +36,6 @@ export class ProjectsComponent implements OnInit {
       this.tiles[0].title = this.dataOne[2];
       this.tiles[0].url = this.dataOne[6];
       this.tiles[0].description = this.dataOne[7];
-      console.log(data)
     });
   }
 
