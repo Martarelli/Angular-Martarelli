@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiGithubService {
 
  apiURL:string = 'https://api.github.com/repos/Martarelli'
+ apiPhoto: string = 'https://avatars.githubusercontent.com/u/62927759?v=4/'
  projectOne:string = 'Calculadora-EstacaJS'
  projectTwo:string = 'diretivasAngular-DIO'
  projectThree:string = 'CRUD-Cod3r'
@@ -18,14 +19,21 @@ export class ApiGithubService {
  getProjectOne():Observable<Object> {
    return this.httpClient.get<Object>(`${this.apiURL}/${this.projectOne}`);
  }
+
  getProjectTwo():Observable<Object> {
    return this.httpClient.get<Object>(`${this.apiURL}/${this.projectTwo}`);
  }
+
  getProjectThree():Observable<Object> {
    return this.httpClient.get<Object>(`${this.apiURL}/${this.projectThree}`);
  }
+
  getProjectFour():Observable<Object> {
    return this.httpClient.get<Object>(`${this.apiURL}/${this.projectFour}`);
+ }
+
+ getProfilePic():Observable<Object> {
+   return this.httpClient.get<Object>(`${this.apiPhoto}`);
  }
 
 }
