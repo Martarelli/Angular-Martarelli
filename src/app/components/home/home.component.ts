@@ -1,3 +1,4 @@
+import { ApiGithubService } from './../../shared/services/api-github.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  photo: any ;
+
+  constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
+    this.getPhoto();
+  }
+
+  getPhoto() {
+    this.photo = this.apiGithub.getProfilePic();
   }
 
 }

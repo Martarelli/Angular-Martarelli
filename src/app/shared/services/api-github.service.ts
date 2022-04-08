@@ -1,3 +1,4 @@
+import { Photo } from './../../components/models/photo';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -32,8 +33,8 @@ export class ApiGithubService {
    return this.httpClient.get<Object>(`${this.apiURL}/${this.projectFour}`);
  }
 
- getProfilePic():Observable<Object> {
-   return this.httpClient.get<Object>(`${this.apiPhoto}`);
+ getProfilePic():string {
+   return this.apiPhoto;
  }
 
 }
