@@ -11,25 +11,22 @@ export class HomeComponent implements OnInit {
 
   profile: Array<any> = [];
   photo: string = '';
+  name: string = '';
+  desc: string = '';
 
   constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
     this.getProfile();
-    this.getPhoto();
   }
 
   getProfile() {
     this.apiGithub.getProfile().subscribe(data => {
       this.profile = Object.values(data);
-      console.log(this.profile);
+      this.name = this.profile[0];
+      this.photo = this.profile[3];
+      this.desc = this.profile[24];
     });
   }
-  getPhoto() {
-    this.photo = this.profile[3];
-    // this.apiGithub.getProfile().subscribe(data => {
-    //   this.photo = Object.values(data);
-    //   console.log(this.photo);
-    };
 }
 
