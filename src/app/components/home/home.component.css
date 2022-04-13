@@ -7,7 +7,7 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 20px 0;
-  background-color: cyan;
+  background-color: #caf0f8;
   height: 50vh;
 }
 
@@ -30,5 +30,5 @@
 
 .stacks {
   height: 50vh;
-  background-color: #000fff;
+  background-color: #023e8a;
 }
