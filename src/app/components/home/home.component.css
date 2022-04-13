@@ -1,0 +1,28 @@
+*{
+  font-family: sans-serif;
+}
+
+.github{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  background-color: cyan;
+}
+
+.image {
+  border-radius: 100%;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px;
+}
