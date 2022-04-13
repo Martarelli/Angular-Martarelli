@@ -13,6 +13,15 @@ export class HomeComponent implements OnInit {
   photo: string = '';
   name: string = '';
   desc: string = '';
+  imgJs: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg';
+  imgTs: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg';
+  imgHtml: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg';
+  imgCss: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg';
+  imgAng: string = 'https://camo.githubusercontent.com/b66984194cfc02fbd1d6afc27ef8428796af59b6c59e1b7d127b33ab0302bd84/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f632f63662f416e67756c61725f66756c6c5f636f6c6f725f6c6f676f2e7376672f32343070782d416e67756c61725f66756c6c5f636f6c6f725f6c6f676f2e7376672e706e67';
+  imgReact: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg';
+  imgPython: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg';
+  imgMysql: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg';
+  imgCoding: string = 'https://drive.google.com/u/1/uc?id=1Pqxb6o31oUgVm4G5J6bPhTCqkr_22_ac&export=download';
 
   constructor(private apiGithub: ApiGithubService) { }
 
