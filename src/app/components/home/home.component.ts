@@ -9,16 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  photo: any ;
+  profile: Array<any> = [];
+  photo: string = '';
 
   constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
+    this.getProfile();
     this.getPhoto();
   }
 
-  getPhoto() {
-    this.photo = this.apiGithub.getProfilePic();
+  getProfile() {
+    this.apiGithub.getProfile().subscribe(data => {
+      this.profile = Object.values(data);
+      console.log(this.profile);
+    });
   }
-
+  getPhoto() {
+    this.photo = this.profile[3];
+    // this.apiGithub.getProfile().subscribe(data => {
+    //   this.photo = Object.values(data);
+    //   console.log(this.photo);
+    };
 }
+
