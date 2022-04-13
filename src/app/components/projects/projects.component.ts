@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1DrMSGoFGZh7q_SWnM4yfGUp93Xwdp9CM&export=download)', description: ' '},
-    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1YoaERu9rZjGncEjwnsLlqwow6xXl_AGZ&export=download)', description: ' '},
+    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1FHLXYMrLptBx0lU6jni_b_dNDMztUlJM&export=download)', description: ' '},
+    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1XipUySNgz89eynSaJ31v3RMwhp6BohnH&export=download)', description: ' '},
     {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=11TcjEFowqvEXVHDoqb-LoBZ5jHhfAxHg&export=download)', description: ' '},
-    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1HyoyCaC8kWbVQ5PhlhnNAnWa-n9WSl04&export=download)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=10rL7f1ZcxrdTIFdqLy7uhyWo5kUJoioj&export=download)', description: ' '},
   ];
 
   dataOne: Array<any> = [];
