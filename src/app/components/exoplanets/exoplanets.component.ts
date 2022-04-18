@@ -1,3 +1,4 @@
+import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExoplanetsComponent implements OnInit {
 
-  constructor() { }
+  exoplanets: Array<any> = [];
+
+  constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
   ngOnInit(): void {
+    this.getExoplanets();
   }
 
+  getExoplanets(){
+    this.apiExoplanets.getQuery().subscribe(data => {
+      this.exoplanets = data;
+      console.log(data);
+      console.log(this.exoplanets)
+    })
+  }
 }
