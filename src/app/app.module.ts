@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ExoplanetsComponent } from './components/exoplanets/exoplanets.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ExoplanetsComponent
   ],
   imports: [
     BrowserModule,
