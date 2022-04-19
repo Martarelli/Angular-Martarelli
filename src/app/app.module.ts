@@ -1,20 +1,22 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExoplanetsComponent } from './components/exoplanets/exoplanets.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { ExoplanetsComponent } from './components/exoplanets/exoplanets.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MatListModule } from '@angular/material/list';
     MatGridListModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatListModule
+    MatListModule,
+    FormsModule,
+    MatTableModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
