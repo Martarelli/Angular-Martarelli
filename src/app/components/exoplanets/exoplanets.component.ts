@@ -9,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class ExoplanetsComponent implements OnInit {
 
   exoplanets: Array<any> = [];
+  lengthPaginator: string = '100';
+  pageSizePaginator:string = '10';
+  pageSizeOptionsPaginator:Array<number> = [25, 50, 100, 200, 1000];
 
   constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
@@ -18,8 +21,9 @@ export class ExoplanetsComponent implements OnInit {
 
   getExoplanets(){
     this.apiExoplanets.getQuery().subscribe(data => {
-      this.exoplanets = data;
-      console.log(data);
+      for (let exoplanet of data){
+        this.exoplanets.push(Object.values(exoplanet));
+      }
       console.log(this.exoplanets)
     })
   }

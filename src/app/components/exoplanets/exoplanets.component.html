@@ -1,6 +1,12 @@
 <p>exoplanets works!</p>
-<mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
+<mat-paginator [length]="lengthPaginator" [pageSize]="pageSizePaginator" [pageSizeOptions]="pageSizeOptionsPaginator"
               aria-label="Select page">
+              <!-- <mat-list *ngFor="let exoplanet of exoplanets">
+                <mat-list-item><p>aaaaaaa {{exoplanet[1]}}</p></mat-list-item>
+              </mat-list> -->
+              <mat-list>
+                <mat-list-item>Suresh</mat-list-item>
+                <mat-list-item>Mahesh</mat-list-item>
+                <mat-list-item>Krishna</mat-list-item>
+              </mat-list>
 </mat-paginator>
