@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ExoplanetsComponent } from './components/exoplanets/exoplanets.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatIconModule,
     MatGridListModule,
     HttpClientModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatListModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
