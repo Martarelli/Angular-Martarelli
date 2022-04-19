@@ -13,6 +13,9 @@ export class ExoplanetsComponent implements OnInit {
   pageSizePaginator:string = '10';
   pageSizeOptionsPaginator:Array<number> = [25, 50, 100, 200, 1000];
 
+  displayedColumns: string[] = ['star','planet','distance'];
+  dataSource = this.exoplanets;
+
   constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
   ngOnInit(): void {
@@ -21,10 +24,12 @@ export class ExoplanetsComponent implements OnInit {
 
   getExoplanets(){
     this.apiExoplanets.getQuery().subscribe(data => {
+      console.log(data[2])
       for (let exoplanet of data){
         this.exoplanets.push(Object.values(exoplanet));
       }
-      console.log(this.exoplanets)
     })
-  }
+    }
+
+
 }
