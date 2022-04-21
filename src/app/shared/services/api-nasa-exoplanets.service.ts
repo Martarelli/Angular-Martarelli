@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,8 +13,13 @@ export class ApiNasaExoplanetsService {
 
   constructor(private httpClient: HttpClient) { }
 
+  headers = new HttpHeaders()
+            .append('access-control-allow-origin', '*')
+            .append('Referrer-Policy', 'no-referrer')
+            .append('accept', 'application/json');
+
   getQuery(): Observable<Array<any>>{
-    return this.httpClient.get<Array<any>>(`${this.queryAPI}`);
+    return this.httpClient.get<Array<any>>(`${this.queryAPI}`, { headers: this.headers });
   }
 
 }
