@@ -14,7 +14,8 @@ export class ApiNasaExoplanetsService {
   constructor(private httpClient: HttpClient) { }
 
   headers = new HttpHeaders()
-            .append('Access-Control-Allow-Origin', '*');
+            .append('Access-Control-Allow-Origin', 'Accept')
+            .append('Referrer-Policy', 'strict-origin-when-cross-origin');
 
   getQuery(): Observable<Array<any>>{
     return this.httpClient.get<Array<any>>(`${this.queryAPI}`, { headers: this.headers });
