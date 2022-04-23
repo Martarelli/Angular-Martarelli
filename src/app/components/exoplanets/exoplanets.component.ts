@@ -1,3 +1,4 @@
+import { Exoplanet } from './../models/exoplanet';
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExoplanetsComponent implements OnInit {
 
-  exoplanets: Array<any> = [];
+  exoplanets: Array<Exoplanet> = [];
   lengthPaginator: string = '100';
   pageSizePaginator:string = '10';
   pageSizeOptionsPaginator:Array<number> = [25, 50, 100, 200, 1000];
@@ -16,7 +17,7 @@ export class ExoplanetsComponent implements OnInit {
   displayedColumns: string[] = ['star','planet','distance'];
   dataSource = this.exoplanets;
 
-  constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
+   constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
   ngOnInit(): void {
     this.getExoplanets();
@@ -30,6 +31,8 @@ export class ExoplanetsComponent implements OnInit {
       }
     })
     }
+
+
 
 
 }
