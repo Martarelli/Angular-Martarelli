@@ -1,4 +1,3 @@
-import { Exoplanet } from './../../components/models/exoplanet';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -15,11 +14,11 @@ export class ApiNasaExoplanetsService {
   constructor(private httpClient: HttpClient) { }
 
   headers = new HttpHeaders()
-            .append('access-control-allow-origin', '*')
+            .append('Access-Control-Allow-Origin', '*')
             .append('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-  getQuery(): Observable<Array<Exoplanet>>{
-    return this.httpClient.get<Array<Exoplanet>>(`${this.queryAPI}`, { headers: this.headers });
+  getQuery(): Observable<Array<any>>{
+    return this.httpClient.get<Array<any>>(`${this.queryAPI}`, { headers: this.headers });
   }
 
 }
