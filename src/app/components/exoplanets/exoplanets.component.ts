@@ -26,8 +26,8 @@ export class ExoplanetsComponent implements OnInit {
   getExoplanets(){
     this.apiExoplanets.getQuery().subscribe(data => {
       console.log(data[2])
-      for (let exoplanet of data){
-        this.exoplanets.push(Object.values(exoplanet));
+      for (let exoplanets of data){
+        this.exoplanets.push(Object.values(exoplanets));
       }
     })
     }
