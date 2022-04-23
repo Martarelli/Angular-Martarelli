@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+      "target": "https://exoplanetarchive.ipac.caltech.edu/",
+      "secure": false,
+      "logLevel": "debug"
+  }
+}
