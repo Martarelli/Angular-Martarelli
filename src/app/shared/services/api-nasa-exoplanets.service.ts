@@ -18,7 +18,7 @@ export class ApiNasaExoplanetsService {
             .append('access-control-allow-origin', '*')
             .append('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-  getQuery(): Observable<Array<Exoplanet>{
+  getQuery(): Observable<Array<Exoplanet>>{
     return this.httpClient.get<Array<Exoplanet>>(`${this.queryAPI}`, { headers: this.headers });
   }
 
