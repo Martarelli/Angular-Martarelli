@@ -3,6 +3,6 @@ export interface Exoplanet {
   "hostname": string,
   "discoverymethod": string,
   "disc_year": number,
-  "pl_orbper": number,
+  "pl_orbper": number | null,
   "pl_masse": number | null
 }
