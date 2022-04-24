@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class ExoplanetsComponent implements OnInit {
 
   exoplanets: Array<any> = [];
-  lengthPaginator: string = '100';
+  lengthPaginator: string = '10';
   pageSizePaginator:string = '10';
-  pageSizeOptionsPaginator:Array<number> = [25, 50, 100, 200, 1000];
+  pageSizeOptionsPaginator:Array<number> = [15, 30, 50, 200, 500];
 
   displayedColumns: string[] = ['star','planet','distance','method', 'year', 'mass'];
   dataSource = this.exoplanets;
@@ -22,6 +22,7 @@ export class ExoplanetsComponent implements OnInit {
   ngOnInit(): void {
     this.getExoplanets();
     this.getExoplanetsArray();
+    this.lengthPaginator = `${this.exoplanets.length}`
   }
 
   getExoplanets(){
