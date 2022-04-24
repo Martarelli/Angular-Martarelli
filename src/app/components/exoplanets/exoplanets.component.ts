@@ -14,7 +14,7 @@ export class ExoplanetsComponent implements OnInit {
   pageSizePaginator:string = '10';
   pageSizeOptionsPaginator:Array<number> = [25, 50, 100, 200, 1000];
 
-  displayedColumns: string[] = ['star','planet','distance'];
+  displayedColumns: string[] = ['star','planet','distance','method', 'year', 'mass'];
   dataSource = this.exoplanets;
 
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
@@ -34,8 +34,10 @@ export class ExoplanetsComponent implements OnInit {
     }
 
   getExoplanetsArray(){
-    this.exoplanets = this.apiExoplanets.getArray();
-    console.log(this.exoplanets[0].pl_name);
+    let data = this.apiExoplanets.getArray();
+    for (let exoplanet of data){
+      this.exoplanets.push(Object.values(exoplanet));
+    };
   }
 
 
