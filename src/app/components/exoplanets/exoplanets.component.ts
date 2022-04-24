@@ -21,6 +21,7 @@ export class ExoplanetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getExoplanets();
+    this.getExoplanetsArray();
   }
 
   getExoplanets(){
@@ -31,6 +32,11 @@ export class ExoplanetsComponent implements OnInit {
       }
     })
     }
+
+  getExoplanetsArray(){
+    this.exoplanets = this.apiExoplanets.getArray();
+    console.log(this.exoplanets[0].pl_name);
+  }
 
 
 
