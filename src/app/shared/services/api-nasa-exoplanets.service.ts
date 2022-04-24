@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiNasaExoplanetsService {
 
-  queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,discoverymethod,disc_year,pl_orbper,pl_masse+from+ps&format=json';
+  queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,discoverymethod,disc_year,pl_orbper,pl_masse,sy_dist+from+ps&format=json';
 
   exoplanetsArray: Array<Exoplanet> = [{"pl_name": "HD 104067 b",
   "hostname": "HD 104067",
