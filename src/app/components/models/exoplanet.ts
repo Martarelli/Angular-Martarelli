@@ -4,5 +4,5 @@ export interface Exoplanet {
   "discoverymethod": string,
   "disc_year": number,
   "pl_orbper": number,
-  "pl_masse": number
+  "pl_masse": number | null
 }
