@@ -37,7 +37,9 @@ export class ExoplanetsComponent implements OnInit {
   getExoplanetsArray(){
     let data = this.apiExoplanets.getArray();
     for (let exoplanet of data){
-      exoplanet.sy_dist ? exoplanet.sy_dist = Math.round((exoplanet.sy_dist * 3.2616) *100 ) /100 : 0;
+      exoplanet.sy_dist ? exoplanet.sy_dist = Math.round((exoplanet.sy_dist * 3.2616) *100 ) /100 : exoplanet.sy_dist = 0;
+      exoplanet.pl_orbper ? exoplanet.pl_orbper = Math.round(exoplanet.pl_orbper *100 ) /100 : exoplanet.pl_orbper = 0;
+      exoplanet.pl_masse ? exoplanet.pl_masse = Math.round(exoplanet.pl_masse *100 ) /100 : exoplanet.pl_masse = 0;
       this.exoplanets.push(Object.values(exoplanet));
     };
   }
