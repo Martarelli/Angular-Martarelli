@@ -1,6 +1,6 @@
 import { Exoplanet } from './../models/exoplanet';
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 
 @Component({
   selector: 'rmapp-exoplanets',
@@ -14,8 +14,10 @@ export class ExoplanetsComponent implements OnInit {
   pageSizePaginator:string = '10';
   pageSizeOptionsPaginator:Array<number> = [15, 30, 50, 200, 500];
 
-  displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
   dataSource = this.exoplanets;
+  displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
+
+
 
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
