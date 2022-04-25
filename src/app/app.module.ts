@@ -5,6 +5,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -38,7 +39,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     MatPaginatorModule,
     MatListModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
