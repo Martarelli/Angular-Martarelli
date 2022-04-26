@@ -10,10 +10,10 @@ import { GridInterface } from '../models/grid-model';
 export class ProjectsComponent implements OnInit {
 
   tiles: GridInterface[] = [
-    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1FHLXYMrLptBx0lU6jni_b_dNDMztUlJM&export=download)', description: ' '},
-    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=1XipUySNgz89eynSaJ31v3RMwhp6BohnH&export=download)', description: ' '},
-    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=11TcjEFowqvEXVHDoqb-LoBZ5jHhfAxHg&export=download)', description: ' '},
-    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://drive.google.com/u/1/uc?id=10rL7f1ZcxrdTIFdqLy7uhyWo5kUJoioj&export=download)', description: ' '},
+    {title: ' ', cols: 4, rows: 1, url:' ', imgurl: 'url(https://live.staticflickr.com/65535/52030345231_dcb8824e5a_b.jpg)', description: ' '},
+    {title: ' ', cols: 2, rows: 2, url:' ', imgurl: 'url(https://live.staticflickr.com/65535/52030380253_e2436f8556_b.jpg)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://live.staticflickr.com/65535/52029298937_7df90677a6_h.jpg)', description: ' '},
+    {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://live.staticflickr.com/65535/52030594999_23771aa987_h.jpg)', description: ' '},
   ];
 
   dataOne: Array<any> = [];
