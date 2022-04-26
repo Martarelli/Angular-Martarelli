@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   imgReact: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg';
   imgPython: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg';
   imgMysql: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg';
-  imgCoding: string = 'https://drive.google.com/u/1/uc?id=1Pqxb6o31oUgVm4G5J6bPhTCqkr_22_ac&export=download';
+  imgCoding: string = 'https://images2.imgbox.com/33/35/zF7bJkKo_o.png';
 
   constructor(private apiGithub: ApiGithubService) { }
 
