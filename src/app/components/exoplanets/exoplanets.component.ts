@@ -1,4 +1,3 @@
-import { Exoplanet } from './../models/exoplanet';
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
 import { Component, OnInit  } from '@angular/core';
 
