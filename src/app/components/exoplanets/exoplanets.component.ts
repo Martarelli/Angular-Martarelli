@@ -22,19 +22,19 @@ export class ExoplanetsComponent implements OnInit {
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
   ngOnInit(): void {
-    this.getExoplanets();
+    // this.getExoplanets();
     this.getExoplanetsArray();
     this.lengthPaginator = `${this.exoplanets.length}`
   }
 
-  getExoplanets(){
-    this.apiExoplanets.getQuery().subscribe(data => {
-      console.log(data[2])
-      for (let exoplanets of data){
-        this.exoplanets.push(Object.values(exoplanets));
-      }
-    })
-    }
+  // getExoplanets(){
+  //   this.apiExoplanets.getQuery().subscribe(data => {
+  //     console.log(data[2])
+  //     for (let exoplanets of data){
+  //       this.exoplanets.push(Object.values(exoplanets));
+  //     }
+  //   })
+  //   }
 
   getExoplanetsArray(){
     let data = this.apiExoplanets.getArray();

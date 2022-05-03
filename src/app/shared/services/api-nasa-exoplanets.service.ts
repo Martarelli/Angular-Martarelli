@@ -8,7 +8,9 @@ import { Injectable } from '@angular/core';
 })
 export class ApiNasaExoplanetsService {
 
-  queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,discoverymethod,disc_year,pl_orbper,pl_masse,sy_dist+from+ps&format=json';
+  // queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/TAP/sync?query=select+pl_name,hostname,discoverymethod,disc_year,pl_orbper,pl_masse+from+ps+where+hostname+like+%27Kep%%27&format=json';
+
+  // queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&where=koi_disposition%20like%20%27CONFIRMED%27%20&format=json';
 
   exoplanetsArray: Array<Exoplanet> = [{"pl_name": "HD 104067 b",
   "hostname": "HD 104067",
@@ -1012,17 +1014,16 @@ export class ApiNasaExoplanetsService {
   "pl_masse": null,
   "sy_dist": 159.6580000}]
 
-  // queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&where=koi_disposition%20like%20%27CONFIRMED%27%20&format=json';
-
   constructor(private httpClient: HttpClient) { }
 
-  headers = new HttpHeaders()
-            .append('Access-Control-Allow-Origin', '*')
-            .append('Referrer-Policy', 'strict-origin-when-cross-origin');
 
-  getQuery(): Observable<Array<any>>{
-    return this.httpClient.get<Array<any>>(`${this.queryAPI}`, { headers: this.headers });
-  }
+  // headers = new HttpHeaders()
+  //           .append('Access-Control-Allow-Origin', '*')
+  //           .append('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // getQuery(): Observable<Array<any>>{
+  //   return this.httpClient.get<Array<any>>(`${this.queryAPI}`, { headers: this.headers });
+  // }
 
   getArray(){
     return this.exoplanetsArray;

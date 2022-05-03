@@ -71,11 +71,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-martarelli:build:production",
-              "proxyConfig": "src/proxy.conf.js"
             },
             "development": {
               "browserTarget": "angular-martarelli:build:development",
-              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"
