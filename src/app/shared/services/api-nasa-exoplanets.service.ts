@@ -12,7 +12,7 @@ export class ApiNasaExoplanetsService {
 
   // queryAPI:string = 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=cumulative&where=koi_disposition%20like%20%27CONFIRMED%27%20&format=json';
 
-  exoplanetsArray: Array<Exoplanet> = [{"pl_name": "HD 104067 b",
+  exoplanetsArray: Exoplanet[] = [{"pl_name": "HD 104067 b",
   "hostname": "HD 104067",
   "discoverymethod": "Radial Velocity",
   "disc_year": 2009,
