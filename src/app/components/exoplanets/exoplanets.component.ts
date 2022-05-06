@@ -1,5 +1,8 @@
+import { Component, OnInit } from '@angular/core';
+import { PageEvent } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
-import { Component, OnInit  } from '@angular/core';
 
 @Component({
   selector: 'rmapp-exoplanets',
@@ -11,21 +14,24 @@ export class ExoplanetsComponent implements OnInit {
   exoplanets: Array<any> = [];
   lengthPaginator: string = '10';
   pageSizePaginator:string = '10';
-  pageSizeOptionsPaginator:Array<number> = [15, 30, 50, 200, 500];
+  pageSizeOptionsPaginator: number[] = [15, 30, 50, 200, 500];
 
-  dataSource = this.exoplanets;
+  dataSource = new MatTableDataSource(this.exoplanets) ;
   displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
 
 
-
-   constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
+   constructor(private apiExoplanets: ApiNasaExoplanetsService, private pageEvent: PageEvent) { }
 
   ngOnInit(): void {
     // this.getExoplanets();
     this.getExoplanetsArray();
     this.lengthPaginator = `${this.exoplanets.length}`
   }
-
+  setPageSizeOptions(setPageSizeOptionsInput: string) {
+    if (setPageSizeOptionsInput) {
+      this.pageSizeOptionsPaginator = setPageSizeOptionsInput.split(',').map(str => +str);
+    }
+  }
   // getExoplanets(){
   //   this.apiExoplanets.getQuery().subscribe(data => {
   //     console.log(data[2])
