@@ -36,9 +36,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
   <mat-paginator
-    [length]="lengthPaginator"
-    [pageSize]="pageSizePaginator"
-    [pageSizeOptions]="pageSizeOptionsPaginator"
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
     aria-label="Select page"
     class="mat-elevation-z8"
   >
