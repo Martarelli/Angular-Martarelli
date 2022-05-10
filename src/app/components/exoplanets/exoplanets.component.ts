@@ -14,7 +14,7 @@ import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exopl
 export class ExoplanetsComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator)
-  paginator: MatPaginator | undefined;
+  paginator: any = MatPaginator;
 
   exoplanets: Array<any> = [];
   length: string = '';
@@ -44,11 +44,12 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    console.log(this.paginator?.page.subscribe(data => {
-      console.log(data.pageSize);
-      console.log(data.pageIndex);
+    // console.log(this.paginator?.page.subscribe(data => {
+    //   console.log(data.pageSize);
+    //   console.log(data.pageIndex);
 
-    }));
+    // }));
+    this.dataSource.paginator = this.paginator;
 
 
   }
