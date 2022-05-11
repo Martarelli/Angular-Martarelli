@@ -19,7 +19,7 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
   exoplanets: Array<any> = [];
   length: string = '';
   pageSize:string = '';
-  pageSizeOptions: number[] = [10, 25, 50, 100];
+  pageSizeOptions: number[] = [15, 25, 50, 100];
 
   dataSource = new MatTableDataSource(this.exoplanets) ;
   displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
