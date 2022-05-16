@@ -3,15 +3,11 @@ div {
   width: 80%;
 }
 
-td {
-  text-align: center;
-}
-
 table {
   width: 100%;
 }
+
 .mat-header-cell {
-  text-align: center !important;
   font-weight: 800;
   background-color: #ccc;
 }
