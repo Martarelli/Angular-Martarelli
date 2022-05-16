@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
@@ -16,12 +17,16 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator)
   paginator: any = MatPaginator;
 
+  @ViewChild(MatSort)
+  sort: any = MatSort;
+
   exoplanets: Array<any> = [];
   length: string = '';
   pageSize:string = '';
   pageSizeOptions: number[] = [15, 25, 50, 100];
 
-  dataSource = new MatTableDataSource(this.exoplanets) ;
+  dataSource = new MatTableDataSource(this.exoplanets);
+
   displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
 
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
@@ -29,7 +34,7 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     // this.getExoplanets();
     this.getExoplanetsArray();
-    this.length = `${this.exoplanets.length}`
+
   }
 
   getExoplanetsArray(){
@@ -44,13 +49,9 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    // console.log(this.paginator?.page.subscribe(data => {
-    //   console.log(data.pageSize);
-    //   console.log(data.pageIndex);
-
-    // }));
+    this.dataSource.data = this.exoplanets;
     this.dataSource.paginator = this.paginator;
-
+    this.dataSource.sort = this.sort;
 
   }
   // getExoplanets(){
