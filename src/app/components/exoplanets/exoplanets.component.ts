@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
+import { Exoplanet } from './../models/exoplanet';
 
 @Component({
   selector: 'rmapp-exoplanets',
@@ -15,19 +16,20 @@ import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exopl
 export class ExoplanetsComponent implements OnInit, AfterViewInit {
 
   @ViewChild(MatPaginator)
-  paginator: any = MatPaginator;
+  paginator: MatPaginator;
 
   @ViewChild(MatSort)
-  sort: any = MatSort;
+  sort: MatSort;
 
-  exoplanets: Array<any> = [];
+  exoplanets: Exoplanet[] = [];
+
   length: string = '';
   pageSize:string = '';
   pageSizeOptions: number[] = [15, 25, 50, 100];
 
-  dataSource = new MatTableDataSource(this.exoplanets);
+  dataSource = new MatTableDataSource();
 
-  displayedColumns: string[] = ['star','planet', 'period','distance','method', 'year', 'mass'];
+  displayedColumns: string[] = ['hostname', 'pl_name', 'pl_orbper', 'discoverymethod', 'disc_year','sy_dist', 'pl_masse'];
 
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
@@ -43,16 +45,16 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
       exoplanet.sy_dist ? exoplanet.sy_dist = Math.round((exoplanet.sy_dist * 3.2616) *100 ) /100 : exoplanet.sy_dist = 0;
       exoplanet.pl_orbper ? exoplanet.pl_orbper = Math.round(exoplanet.pl_orbper *100 ) /100 : exoplanet.pl_orbper = 0;
       exoplanet.pl_masse ? exoplanet.pl_masse = Math.round(exoplanet.pl_masse *100 ) /100 : exoplanet.pl_masse = 0;
-      this.exoplanets.push(Object.values(exoplanet));
+      this.exoplanets.push(exoplanet);
     };
+    this.dataSource.data = this.exoplanets;
   }
 
   ngAfterViewInit(): void {
 
-    this.dataSource.data = this.exoplanets;
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
+    console.log(this.dataSource.sort)
   }
   // getExoplanets(){
   //   this.apiExoplanets.getQuery().subscribe(data => {
