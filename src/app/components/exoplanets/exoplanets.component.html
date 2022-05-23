@@ -1,47 +1,50 @@
-<!-- <mat-list *ngFor="let exoplanet of exoplanets">
-<mat-list-item>{{exoplanet}}</mat-list-item>
-</mat-list> -->
 <div class="mat-elevation-z20">
-  <table mat-table [dataSource]="dataSource" matSort>
-    <ng-container matColumnDef="hostname">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Estrela Hospedeira</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.hostname }}</td>
-    </ng-container>
-    <ng-container matColumnDef="pl_name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Exoplaneta</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_name }}</td>
-    </ng-container>
-    <ng-container matColumnDef="pl_orbper">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Período Orbital(dias)</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_orbper }}</td>
-    </ng-container>
-    <ng-container matColumnDef="discoverymethod">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Método de Descoberta</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.discoverymethod }}</td>
-    </ng-container>
-    <ng-container matColumnDef="disc_year">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ano da descoberta</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.disc_year }}</td>
-    </ng-container>
-    <ng-container matColumnDef="sy_dist">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Distância(lyr)</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.sy_dist }}</td>
-    </ng-container>
-    <ng-container matColumnDef="pl_masse">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Massas terrestres</th>
-      <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_masse }}</td>
-    </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
-  <mat-paginator
-    [length]="length"
-    [pageSize]="pageSize"
-    [pageSizeOptions]="pageSizeOptions"
-    showFirstLastButtons
-    aria-label="Select page"
-    class="mat-elevation-z8"
-  >
-  </mat-paginator>
+    <mat-form-field appearance="standard">
+      <mat-label>Filtro</mat-label>
+      <input class="input-filter" matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" matSort>
+      <ng-container matColumnDef="hostname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Estrela Hospedeira</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.hostname }}</td>
+      </ng-container>
+      <ng-container matColumnDef="pl_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Exoplaneta</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="pl_orbper">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Período Orbital(dias)</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_orbper }}</td>
+      </ng-container>
+      <ng-container matColumnDef="discoverymethod">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Método de Descoberta</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.discoverymethod }}</td>
+      </ng-container>
+      <ng-container matColumnDef="disc_year">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ano da descoberta</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.disc_year }}</td>
+      </ng-container>
+      <ng-container matColumnDef="sy_dist">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Distância(lyr)</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.sy_dist }}</td>
+      </ng-container>
+      <ng-container matColumnDef="pl_masse">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Massas terrestres</th>
+        <td mat-cell *matCellDef="let exoplanets">{{ exoplanets.pl_masse }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      [length]="length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="pageSizeOptions"
+      showFirstLastButtons
+      aria-label="Select page"
+      class="mat-elevation-z8"
+    >
+    </mat-paginator>
 </div>

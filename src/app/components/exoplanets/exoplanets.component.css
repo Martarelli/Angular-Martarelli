@@ -1,8 +1,12 @@
-div {
+.body-exoplanets {
+  height: 100%;
+  margin: 50px auto;
+  width: 100%;
+}
+.exoplanets-table{
   margin: 50px auto;
   width: 80%;
 }
-
 table {
   width: 100%;
 }
@@ -12,3 +16,7 @@ table {
   background-color: #ccc;
 }
 
+.mat-form-field{
+  width: 100%;
+  padding: 0 2rem;
+}
