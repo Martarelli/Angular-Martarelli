@@ -26,7 +26,7 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
 
   length: string = '';
   pageSize:string = '';
-  pageSizeOptions: number[] = [15, 25, 50, 100];
+  pageSizeOptions: number[] = [10, 25, 50, 100];
 
   dataSource = new MatTableDataSource<Exoplanet>();
 
