@@ -20,6 +20,7 @@
   font-weight: 800;
   font-size: 2rem;
   text-shadow: 15px 10px 6px rgba(0,0,0,0.6) ;
+  transition: all 1s ;
 }
 
 .container > p {
@@ -30,11 +31,9 @@
 .container > a:hover {
   font-size: 2.05rem;
   color: grey;
-  transition: all 1s ;
 }
 .container > a:active {
   font-size: 2.05rem;
   color: whitesmoke;
-  transition: all 1s ;
 }
 
