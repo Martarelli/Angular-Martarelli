@@ -21,9 +21,10 @@ a {
   text-decoration: none;
   color: white;
   text-shadow: 7px 5px 6px rgba(0,0,0,0.6) ;
+  transition: ease-in-out 0.8s  ;
 }
 
 a:hover {
   color: black;
-  transition: ease-in-out 1.2s  ;
+
 }

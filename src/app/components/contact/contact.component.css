@@ -1,0 +1,65 @@
+.body {
+  display: flex;
+  height: 86.4vh;
+  width: 100%;
+}
+
+img {
+  padding: 3rem;
+  height: 45vh;
+  width: 80vh;
+}
+
+.left-container{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  background-color: #023E8A;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container > h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: whitesmoke;
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  background-color: #ADE8F4;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-container > h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.contato {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.linkedin > a > img ,.github > a > img{
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp > a > img {
+  padding: 0;
+  margin: 0 3rem;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+

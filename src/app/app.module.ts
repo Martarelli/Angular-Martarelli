@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     HeaderComponent,
     FooterComponent,
     ProjectsComponent,
-    ExoplanetsComponent
+    ExoplanetsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

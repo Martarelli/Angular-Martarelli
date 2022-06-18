@@ -1,3 +1,4 @@
+import { ContactComponent } from './components/contact/contact.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'exoplanets',
     component: ExoplanetsComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   }
 ];
 
