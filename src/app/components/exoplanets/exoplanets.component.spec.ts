@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ApiNasaExoplanetsService } from 'src/app/shared/services/api-nasa-exoplanets.service';
 
 import { ExoplanetsComponent } from './exoplanets.component';
 
@@ -8,7 +10,9 @@ describe('ExoplanetsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExoplanetsComponent ]
+      declarations: [ ExoplanetsComponent ],
+      imports : [HttpClientModule],
+      providers : [ApiNasaExoplanetsService]
     })
     .compileComponents();
   });

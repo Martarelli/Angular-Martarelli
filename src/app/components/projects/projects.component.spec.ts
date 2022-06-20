@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ApiGithubService } from 'src/app/shared/services/api-github.service';
 
 import { ProjectsComponent } from './projects.component';
 
@@ -8,7 +10,9 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectsComponent ]
+      declarations: [ ProjectsComponent ],
+      imports : [HttpClientModule],
+      providers : [ApiGithubService]
     })
     .compileComponents();
   });
