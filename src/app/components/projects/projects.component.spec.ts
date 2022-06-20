@@ -7,6 +7,8 @@ import { ProjectsComponent } from './projects.component';
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
+  let githubService: ApiGithubService;
+  let response:any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,15 +17,37 @@ describe('ProjectsComponent', () => {
       providers : [ApiGithubService]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ProjectsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    githubService = TestBed.inject(ApiGithubService);
+
   });
+
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should resquest project one', () => {
+    let projectOne = githubService.getProjectOne;
+    expect(projectOne).toBeTruthy();
+  });
+
+  it('should resquest project two', () => {
+    let projectOne = githubService.getProjectTwo;
+    expect(projectOne).toBeTruthy();
+  });
+
+  it('should resquest project three', () => {
+    let projectOne = githubService.getProjectThree;
+    expect(projectOne).toBeTruthy();
+  });
+
+  it('should resquest project for', () => {
+    let projectOne = githubService.getProjectFour;
+    expect(projectOne).toBeTruthy();
   });
 });
