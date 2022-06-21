@@ -1,3 +1,4 @@
+import { GithubRepository } from './../../shared/models/github-repository';
 import { ApiGithubService } from './../../shared/services/api-github.service';
 import { Component, OnInit } from '@angular/core';
 import { GridInterface } from '../../shared/models/grid-model';
@@ -16,11 +17,6 @@ export class ProjectsComponent implements OnInit {
     {title: ' ', cols: 2, rows: 1, url:' ', imgurl: 'url(https://live.staticflickr.com/65535/52030594999_23771aa987_h.jpg)', description: ' '},
   ];
 
-  dataOne: Array<any> = [];
-  dataTwo: Array<any> = [];
-  dataThree: Array<any> = [];
-  dataFour: Array<any> = [];
-
   constructor(private apiGithub: ApiGithubService) { }
 
   ngOnInit(): void {
@@ -32,37 +28,33 @@ export class ProjectsComponent implements OnInit {
 
   getProjectOne(){
     this.apiGithub.getProjectOne().subscribe(data => {
-      this.dataOne = Object.values(data)
-      this.tiles[0].title = this.dataOne[2];
-      this.tiles[0].url = this.dataOne[6];
-      this.tiles[0].description = this.dataOne[7];
+      this.tiles[0].title = data.name;
+      this.tiles[0].url = data.url;
+      this.tiles[0].description = data.description;
     });
   }
 
   getProjectTwo() {
     this.apiGithub.getProjectTwo().subscribe(data => {
-      this.dataTwo = Object.values(data)
-      this.tiles[1].title = this.dataTwo[2];
-      this.tiles[1].url = this.dataTwo[6];
-      this.tiles[1].description = this.dataTwo[7];
+      this.tiles[1].title = data.name;
+      this.tiles[1].url = data.url;
+      this.tiles[1].description = data.description;
     });
   }
 
   getProjectThree(){
     this.apiGithub.getProjectThree().subscribe(data => {
-      this.dataThree = Object.values(data)
-      this.tiles[2].title = this.dataThree[2];
-      this.tiles[2].url = this.dataThree[6];
-      this.tiles[2].description = this.dataThree[7];
+      this.tiles[2].title = data.name;
+      this.tiles[2].url = data.url;
+      this.tiles[2].description = data.description;
     });
   }
 
   getProjectFour(){
     this.apiGithub.getProjectFour().subscribe(data => {
-      this.dataFour = Object.values(data)
-      this.tiles[3].title = this.dataFour[2];
-      this.tiles[3].url = this.dataFour[6];
-      this.tiles[3].description = this.dataFour[7];
+      this.tiles[3].title = data.name;
+      this.tiles[3].url = data.url;
+      this.tiles[3].description = data.description;
     });
   }
 
