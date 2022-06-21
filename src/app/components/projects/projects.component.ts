@@ -1,6 +1,6 @@
 import { ApiGithubService } from './../../shared/services/api-github.service';
 import { Component, OnInit } from '@angular/core';
-import { GridInterface } from '../models/grid-model';
+import { GridInterface } from '../../shared/models/grid-model';
 
 @Component({
   selector: 'rmapp-projects',

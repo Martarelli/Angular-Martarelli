@@ -4,7 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
-import { Exoplanet } from './../models/exoplanet';
+import { Exoplanet } from '../../shared/models/exoplanet';
 
 
 @Component({

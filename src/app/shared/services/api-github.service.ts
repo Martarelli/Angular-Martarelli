@@ -1,7 +1,9 @@
-import { Photo } from './../../components/models/photo';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
+import { GithubProfile } from '../models/github-profile';
+import { GithubRepository } from '../models/github-repository';
 
 @Injectable({
   providedIn: 'root'
@@ -17,24 +19,24 @@ export class ApiGithubService {
 
  constructor(private httpClient: HttpClient) { }
 
- getProjectOne():Observable<Object> {
-   return this.httpClient.get<Object>(`${this.apiURL}/${this.projectOne}`);
+ getProjectOne():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectOne}`);
  }
 
- getProjectTwo():Observable<Object> {
-   return this.httpClient.get<Object>(`${this.apiURL}/${this.projectTwo}`);
+ getProjectTwo():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectTwo}`);
  }
 
- getProjectThree():Observable<Object> {
-   return this.httpClient.get<Object>(`${this.apiURL}/${this.projectThree}`);
+ getProjectThree():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectThree}`);
  }
 
- getProjectFour():Observable<Object> {
-   return this.httpClient.get<Object>(`${this.apiURL}/${this.projectFour}`);
+ getProjectFour():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectFour}`);
  }
 
- getProfile():Observable<Object> {
-   return this.httpClient.get<Object>(this.apiProfile)
+ getProfile():Observable<GithubProfile> {
+   return this.httpClient.get<GithubProfile>(this.apiProfile)
  }
 
 }

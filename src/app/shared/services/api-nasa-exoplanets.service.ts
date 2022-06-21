@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Exoplanet } from './../../components/models/exoplanet';
+import { Exoplanet } from '../models/exoplanet';
 
 @Injectable({
   providedIn: 'root'

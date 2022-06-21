@@ -1,5 +1,6 @@
-import { ApiGithubService } from './../../shared/services/api-github.service';
 import { Component, OnInit } from '@angular/core';
+
+import { ApiGithubService } from './../../shared/services/api-github.service';
 
 
 @Component({
@@ -9,10 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  profile: Array<any> = [];
-  photo: string = '';
-  name: string = '';
-  desc: string = '';
+  name:string;
+  avatar: string;
+  bio:string;
   imgJs: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg';
   imgTs: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg';
   imgHtml: string = 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg';
@@ -27,14 +27,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProfile();
-  }
+    };
 
   getProfile() {
     this.apiGithub.getProfile().subscribe(data => {
-      this.profile = Object.values(data);
-      this.name = this.profile[0];
-      this.photo = this.profile[3];
-      this.desc = this.profile[24];
+      this.avatar = data.avatar_url;
+      this.name = data.name;
+      this.bio = data.bio;
     });
   }
 }
