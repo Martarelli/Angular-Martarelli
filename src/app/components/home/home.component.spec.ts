@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  let githubService: ApiGithubService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,15 +16,18 @@ describe('HomeComponent', () => {
       providers : [ApiGithubService]
     })
     .compileComponents();
-  });
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
+    githubService = TestBed.inject(ApiGithubService);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ('should get name from github',() => {
+    let name = githubService.getProfile;
+  })
 });

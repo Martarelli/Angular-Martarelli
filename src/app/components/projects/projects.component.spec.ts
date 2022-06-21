@@ -8,7 +8,6 @@ describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
   let githubService: ApiGithubService;
-  let response:any;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
