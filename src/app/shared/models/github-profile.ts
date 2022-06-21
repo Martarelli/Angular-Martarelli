@@ -18,13 +18,13 @@ export interface GithubProfile {
   type:                string;
   site_admin:          boolean;
   name:                string;
-  company:             null;
+  company:             null | string;
   blog:                string;
-  location:            null;
-  email:               null;
+  location:            null | string;
+  email:               null | string;
   hireable:            boolean;
   bio:                 string;
-  twitter_username:    null;
+  twitter_username:    null | string;
   public_repos:        number;
   public_gists:        number;
   followers:           number;
