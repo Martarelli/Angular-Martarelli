@@ -16,6 +16,11 @@
 @media (max-width: 1050px){
   span{
     font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .footer-container{
+    justify-content: center;
   }
 
 }

@@ -33,6 +33,11 @@
   border-radius: 100%;
 }
 
+.image-container > img {
+  height: 22.5rem;
+  width: 22.5rem;
+}
+
 .name {
   font-size: 3rem;
   font-weight: 800;
@@ -55,7 +60,6 @@
 }
 
 .codingimg > img {
-
   height: 25rem;
   width: 25rem;
 }
@@ -101,5 +105,30 @@
   .text > h1{
     font-size: 1.5rem;
   }
+
+  .image-container > img {
+    height: 15rem;
+    width: 15rem;
+  }
 }
 
+@media (max-width: 500px){
+  .icons{
+    padding: 1.5rem;
+  }
+
+  .icons > img {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  .codingimg > img {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+
+  .image-container > img {
+    height: 10rem;
+    width: 10rem;
+  }
+}

@@ -40,8 +40,14 @@ a:hover {
   }
 
   a{
-    padding: .6rem;
+    padding: 0.5rem;
   }
+}
 
+@media (max-width: 600px) {
 
+  a{
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
 }
