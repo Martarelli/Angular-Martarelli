@@ -1,16 +1,34 @@
-*{
-  font-family: sans-serif;
-}
-
 .github{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px 0;
-  background-color: #caf0f8;
-  height: 43.4vh;
+  padding: 1.2rem 0;
+  background-color: #333;
+  height: 60%;
+  color: #fff;
 }
 
+.stacks {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 40%;
+  width: 100%;
+  background-color: #111;
+}
+
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  padding: 1.5rem;
+}
+
+.image-container{
+  height: 20%;
+}
 .image {
   border-radius: 100%;
 }
@@ -19,37 +37,27 @@
   font-size: 3rem;
   font-weight: 800;
   text-align: center;
-
 }
 
 .description {
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 20px;
-}
-
-
-.stacks {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  height: 43vh;
-  width: 100%;
-  background-color: #023e8a;
+  padding: 1.5rem;
+  text-align: center;
 }
 
 .codingimg {
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 40%;
 }
 
 .codingimg > img {
-  padding-left: 50px;
-  height: 470px;
-  width: 470px;
+
+  height: 25rem;
+  width: 25rem;
 }
 
 .icontext{
@@ -57,7 +65,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 70%;
+  width: 60%;
 }
 
 .icons {
@@ -68,12 +76,30 @@
 }
 
 .icons > img {
-  height: 50px;
-  width: 50px;
+  height: 3.6rem;
+  width: 3.6rem;
 }
 
 .text > h1 {
   color: whitesmoke;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
+  text-align: center;
 }
+
+@media (max-width: 1050px){
+
+  .stacks{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .icons{
+    padding: 2rem;
+  }
+
+  .text > h1{
+    font-size: 1.5rem;
+  }
+}
+
