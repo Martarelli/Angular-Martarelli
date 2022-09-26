@@ -22,8 +22,8 @@ a {
   padding: 0 1.1rem;
   text-decoration: none;
   color: white;
-  text-shadow: 0.6rem 0.4rem 0.5rem rgba(0,0,0,0.8) ;
-  transition: ease-in-out 0.8s  ;
+  text-shadow: 0.6rem 0.4rem 0.5rem rgba(0, 0, 0, 0.8);
+  transition: ease-in-out 0.8s;
 }
 
 a:hover {
@@ -31,22 +31,35 @@ a:hover {
 }
 
 @media (max-width: 1050px) {
-
-  .header, .links{
+  .header,
+  .links {
     padding: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  a{
+  .links {
+    padding-top: 1rem;
+  }
+
+  .title {
+    display: none;
+  }
+
+  a {
     padding: 0.5rem;
   }
 }
 
 @media (max-width: 600px) {
-
-  a{
+  .links {
+    padding-top: 1rem;
+  }
+  .title {
+    display: none;
+  }
+  a {
     font-size: 1.5rem;
     padding: 0.2rem;
   }
