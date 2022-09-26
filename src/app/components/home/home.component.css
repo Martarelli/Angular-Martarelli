@@ -93,6 +93,9 @@
 
 @media (max-width: 1050px){
 
+  .github{
+    padding-top: 0;
+  }
   .stacks{
     flex-direction: column;
     align-items: center;
@@ -113,6 +116,7 @@
 }
 
 @media (max-width: 500px){
+
   .icons{
     padding: 1.5rem;
   }
