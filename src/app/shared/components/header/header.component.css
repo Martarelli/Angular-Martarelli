@@ -43,7 +43,8 @@ a:hover {
     padding: 1rem 0;
   }
 
-  .title {
+  .title,
+  .no-responsive {
     display: none;
   }
 
