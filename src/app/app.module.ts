@@ -21,6 +21,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { ContactComponent } from './components/contact/contact.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ContactComponent } from './components/contact/contact.component';
     MatTableModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

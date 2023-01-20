@@ -1,8 +1,6 @@
-export interface GridInterface {
+export interface ProjectInterface {
 
   title: string,
-  cols: number,
-  rows: number,
   url: string,
   imgurl: string,
   description: string,
