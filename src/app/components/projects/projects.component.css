@@ -6,6 +6,7 @@ section {
   flex-wrap: wrap;
   background-color: #333333;
   padding: 5rem 0;
+  min-height: 84vh;
 }
 
 .mat-card__container{
