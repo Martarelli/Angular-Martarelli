@@ -65,6 +65,26 @@ section {
   object-fit: fill;
 }
 
+@media (max-width: 1050px){
+
+  section{
+    padding: 0;
+  }
+  .mat-card__container{
+    height: 25rem;
+    width: 20rem;
+    margin: 2rem 2rem;
+  }
+  .card__description{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .title{
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
 
 
 
