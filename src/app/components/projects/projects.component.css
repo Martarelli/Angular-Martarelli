@@ -19,13 +19,19 @@ section {
   height: 30rem;
   width: 25rem;
   margin: 2rem 0;
-  background-color: #585858;
   border-radius: 1.5rem;
+  background: rgba( 200, 200, 200, 0.08 );
+  box-shadow: 30px 60px 40px 0 rgba( 0, 0, 0, 0.37 );
+  backdrop-filter: blur( 11.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  -webkit-backdrop-filter: blur( 11.5px );
 }
+
 .title{
   font-size: 2rem;
   font-weight: 800;
 }
+
 .description{
   font-size: 1.2rem;
   font-weight: 500;
