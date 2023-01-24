@@ -27,21 +27,31 @@ section {
   -webkit-backdrop-filter: blur( 11.5px );
 }
 
+.card__header {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 5rem;
+}
+
 .title{
   font-size: 2rem;
   font-weight: 800;
 }
 
-.description{
+.card__description{
+  max-height: 15%;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: justify;
 }
 
-.imagem__container > a > img{
-  max-width: 15rem;
-  max-height: 15rem;
-  object-fit: fill;
+.card__image-container {
+  height: 25rem;
+}
+
+.card__image {
+  object-fit: cover;
 }
 
 
