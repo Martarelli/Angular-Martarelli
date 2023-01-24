@@ -38,9 +38,10 @@ section {
   text-align: justify;
 }
 
-.imagem__container{
-  width: 16rem;
-  height: 16rem;
+.imagem__container > a > img{
+  max-width: 15rem;
+  max-height: 15rem;
+  object-fit: fill;
 }
 
 
