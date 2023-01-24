@@ -4,7 +4,7 @@
       <mat-card-title class="title">{{project.title}}</mat-card-title>
     </mat-card-header>
     <div class="card__image-container">
-      <a href="{{project.url}}" target="_blank">
+      <a [href]="project.url" target="_blank">
         <img class="card__image" src="{{project.imgurl}}" alt="Imagem projeto {{project.title}}">
       </a>
     </div>
