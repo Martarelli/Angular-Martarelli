@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectOne().subscribe((data: GithubRepository) => {
       this.projects[0].title = data.name;
       this.projects[0].url = data.html_url;
-      this.projects[0].imgurl = '';
+      this.projects[0].imgurl = '../../../assets/images/ecommerceAngular.png';
       this.projects[0].description = data.description;
     });
   }
@@ -43,7 +43,7 @@ export class ProjectsComponent implements OnInit {
     this.apiGithub.getProjectTwo().subscribe((data: GithubRepository) => {
       this.projects[1].title = data.name;
       this.projects[1].url = data.html_url;
-      this.projects[1].imgurl = '';
+      this.projects[1].imgurl = '../../../assets/images/calcReact.png';
       this.projects[1].description = data.description;
     });
   }
@@ -67,7 +67,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjectFive(){
-    this.apiGithub.getProjectFour().subscribe((data: GithubRepository) => {
+    this.apiGithub.getProjectFive().subscribe((data: GithubRepository) => {
       this.projects[4].title = data.name;
       this.projects[4].url = data.html_url;
       this.projects[4].imgurl = '../../../assets/images/calculadoraJS.jpg';
@@ -76,7 +76,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjectSix(){
-    this.apiGithub.getProjectFour().subscribe((data: GithubRepository) => {
+    this.apiGithub.getProjectSix().subscribe((data: GithubRepository) => {
       this.projects[5].title = data.name;
       this.projects[5].url = data.html_url;
       this.projects[5].imgurl = '../../../assets/images/netflixJs.jpg';
