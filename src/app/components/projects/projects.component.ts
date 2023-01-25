@@ -26,6 +26,8 @@ export class ProjectsComponent implements OnInit {
     this.getProjectTwo();
     this.getProjectThree();
     this.getProjectFour();
+    this.getProjectFive();
+    this.getProjectSix();
   }
 
   getProjectOne(){
@@ -63,6 +65,7 @@ export class ProjectsComponent implements OnInit {
       this.projects[3].description = data.description;
     });
   }
+
   getProjectFive(){
     this.apiGithub.getProjectFour().subscribe((data: GithubRepository) => {
       this.projects[4].title = data.name;
@@ -71,6 +74,7 @@ export class ProjectsComponent implements OnInit {
       this.projects[4].description = data.description;
     });
   }
+
   getProjectSix(){
     this.apiGithub.getProjectFour().subscribe((data: GithubRepository) => {
       this.projects[5].title = data.name;

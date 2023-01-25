@@ -12,10 +12,12 @@ export class ApiGithubService {
 
  apiURL:string = 'https://api.github.com/repos/Martarelli'
  apiProfile: string = 'https://api.github.com/users/Martarelli'
- projectOne:string = 'Calculadora-EstacaJS'
- projectTwo:string = 'diretivasAngular-DIO'
+ projectOne:string = 'ecommerce-capgemini'
+ projectTwo:string = 'calculadora-ReactJS'
  projectThree:string = 'CRUD-Cod3r'
- projectFour:string = 'Netflix'
+ projectFour:string = 'diretivasAngular-DIO'
+ projectFive:string = 'Calculadora-EstacaJS'
+ projectSix:string = 'Netflix'
 
  constructor(private httpClient: HttpClient) { }
 
@@ -33,6 +35,14 @@ export class ApiGithubService {
 
  getProjectFour():Observable<GithubRepository> {
    return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectFour}`);
+ }
+
+ getProjectFive():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectFive}`);
+ }
+
+ getProjectSix():Observable<GithubRepository> {
+   return this.httpClient.get<GithubRepository>(`${this.apiURL}/${this.projectSix}`);
  }
 
  getProfile():Observable<GithubProfile> {
