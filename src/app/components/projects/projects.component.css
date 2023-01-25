@@ -14,7 +14,7 @@ section {
 .mat-card__container{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 35rem;
   width: 25rem;
@@ -29,7 +29,7 @@ section {
 
 .card__header {
   align-items: center;
-  margin: 0;
+  margin: 1rem 0 0 0 !important;
   padding: 0;
   height: 5rem;
 }
@@ -37,6 +37,9 @@ section {
 .title{
   font-size: 2rem;
   font-weight: 800;
+  text-transform: uppercase;
+  line-height: 2rem;
+  text-align: center;
 }
 
 .card__description{
@@ -47,11 +50,12 @@ section {
   text-align: justify;
   justify-content: center;
   align-items: center;
+  padding: 0 0 2rem 0;
 }
 
 .card__image-container {
   padding: 0;
-  margin: 0;
+  margin: 0 0 2rem 0;
   justify-content: center;
   align-items: center;
   height: 15rem;
@@ -63,6 +67,7 @@ section {
   height: auto;
   width: auto;
   object-fit: fill;
+  border: black 0.8rem solid;
 }
 
 @media (max-width: 1050px){
@@ -70,11 +75,13 @@ section {
   section{
     padding: 0;
   }
+
   .mat-card__container{
     height: 25rem;
     width: 20rem;
     margin: 2rem 2rem;
   }
+
   .card__description{
     font-size: 1rem;
     font-weight: 400;
