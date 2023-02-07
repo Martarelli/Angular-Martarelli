@@ -6919,6 +6919,8 @@ export class ApiNasaExoplanetsService {
 
   headers = new HttpHeaders()
             .append('Access-Control-Allow-Origin', '*')
+            .append('Access-Control-Allow-Method','GET')
+            .append('Access-Control-Allow-Headers','*')
             .append('Referrer-Policy', 'strict-origin-when-cross-origin');
 
   getQuery(): Observable<Array<any>>{

@@ -1,10 +1,12 @@
+import { Exoplanet } from './../../shared/models/exoplanet';
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { ApiNasaExoplanetsService } from './../../shared/services/api-nasa-exoplanets.service';
-import { Exoplanet } from '../../shared/models/exoplanet';
+
 
 
 @Component({
@@ -35,9 +37,14 @@ export class ExoplanetsComponent implements OnInit, AfterViewInit {
    constructor(private apiExoplanets: ApiNasaExoplanetsService) { }
 
   ngOnInit(): void {
+    // this.getExoplanetsAPI();
     this.getExoplanetsArray();
   }
 
+  // getExoplanetsAPI() {
+  //   let exoplanetsData: Exoplanet[] = []
+  //   this.apiExoplanets.getQuery().subscribe(data => console.log(data));
+  // }
   getExoplanetsArray(){
     let data = this.apiExoplanets.getArray();
     for (let exoplanet of data){
